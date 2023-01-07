@@ -1,0 +1,19 @@
+kelimeler =  %w[
+    demo none tied evil
+    dome mode live fowl
+    veil wolf diet vile
+    edit tide flow neon
+]
+
+anagram = {}
+kelimeler.each do |kelime|
+    key = kelime.split('').sort.join('')
+
+    if anagram[key].nil?
+        anagram[key] = [kelime]
+    else
+        anagram[key] << kelime
+    end
+end
+
+p anagram
